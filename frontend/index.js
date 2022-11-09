@@ -5,7 +5,7 @@ const getBooksInformation = async() => {
     const json = await fetch(url)   
         .then(res => {
             console.log("取得成功")
-            getBooksInformation(res)
+            return res
         }).catch(error => {
             console.log("取得失敗")
             return null
